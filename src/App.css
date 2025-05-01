@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input-box {
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-todo {
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 200px;
+  height: 30px;
+}
+
+.button-todo {
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.search-box {
+  display: flex;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.list-todo {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+}
+
+.list-todo__left {
+  display: flex;
+  gap: 10px;
+}
+
+.list-todo__mark {
+}
+
+.list-todo__delete {
+  cursor: pointer;
+  color: red;
+}
+
+.filter {
+  display: grid;
+  gap: 10px;
+  width: 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filter-button {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.all:hover {
+  background-color: dodgerblue;
+}
+.complete:hover {
+  background-color: green;
+}
+.pending:hover {
+  background-color: gray;
+}
+
+.all.active {
+  background-color: dodgerblue !important;
+}
+
+.complete.active {
+  background-color: green !important;
+}
+.pending.active {
+  background-color: gray !important;
+}
+
+.post {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.post-box {
+  padding: 20px;
+}
+
+.post-top {
+  display: flex;
+  gap: 6px;
+}
+
+.post-box__desc {
+  margin-top: 5px;
+}
+
+.button-section {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter-post {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
